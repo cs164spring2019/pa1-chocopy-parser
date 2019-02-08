@@ -1,0 +1,43 @@
+{
+  "kind" : "Program",
+  "declarations" : [ ],
+  "statements" : [ {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "IfExpr",
+      "condition" : {
+        "kind" : "BinaryExpr",
+        "left" : {
+          "kind" : "IntegerLiteral",
+          "value" : 1,
+          "location" : [ 1, 6, 1, 6 ]
+        },
+        "operator" : ">",
+        "right" : {
+          "kind" : "IntegerLiteral",
+          "value" : 2,
+          "location" : [ 1, 10, 1, 10 ]
+        },
+        "location" : [ 1, 6, 1, 10 ]
+      },
+      "thenExpr" : {
+        "kind" : "IntegerLiteral",
+        "value" : 3,
+        "location" : [ 1, 1, 1, 1 ]
+      },
+      "elseExpr" : {
+        "kind" : "IntegerLiteral",
+        "value" : 4,
+        "location" : [ 1, 17, 1, 17 ]
+      },
+      "location" : [ 1, 1, 1, 17 ]
+    },
+    "location" : [ 1, 1, 1, 17 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 1, 17 ]
+}

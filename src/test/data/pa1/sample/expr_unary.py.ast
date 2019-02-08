@@ -1,0 +1,24 @@
+{
+  "kind" : "Program",
+  "declarations" : [ ],
+  "statements" : [ {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "UnaryExpr",
+      "operator" : "-",
+      "operand" : {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 1, 2, 1, 2 ]
+      },
+      "location" : [ 1, 1, 1, 2 ]
+    },
+    "location" : [ 1, 1, 1, 2 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 1, 2 ]
+}

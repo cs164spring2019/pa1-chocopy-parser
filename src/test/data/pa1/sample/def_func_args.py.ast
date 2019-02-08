@@ -1,0 +1,92 @@
+{
+  "kind" : "Program",
+  "declarations" : [ {
+    "kind" : "FuncDef",
+    "name" : {
+      "kind" : "Identifier",
+      "name" : "foo",
+      "location" : [ 1, 5, 1, 7 ]
+    },
+    "params" : [ {
+      "kind" : "TypedVar",
+      "identifier" : {
+        "kind" : "Identifier",
+        "name" : "x",
+        "location" : [ 1, 9, 1, 9 ]
+      },
+      "type" : {
+        "kind" : "ClassType",
+        "className" : "int",
+        "location" : [ 1, 11, 1, 13 ]
+      },
+      "location" : [ 1, 9, 1, 13 ]
+    }, {
+      "kind" : "TypedVar",
+      "identifier" : {
+        "kind" : "Identifier",
+        "name" : "y",
+        "location" : [ 1, 16, 1, 16 ]
+      },
+      "type" : {
+        "kind" : "ClassType",
+        "className" : "int",
+        "location" : [ 1, 18, 1, 20 ]
+      },
+      "location" : [ 1, 16, 1, 20 ]
+    } ],
+    "returnType" : {
+      "kind" : "ClassType",
+      "className" : "bool",
+      "location" : [ 1, 26, 1, 29 ]
+    },
+    "declarations" : [ ],
+    "statements" : [ {
+      "kind" : "ReturnStmt",
+      "value" : {
+        "kind" : "BinaryExpr",
+        "left" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 2, 12, 2, 12 ]
+        },
+        "operator" : ">",
+        "right" : {
+          "kind" : "Identifier",
+          "name" : "y",
+          "location" : [ 2, 16, 2, 16 ]
+        },
+        "location" : [ 2, 12, 2, 16 ]
+      },
+      "location" : [ 2, 5, 2, 16 ]
+    } ],
+    "location" : [ 1, 1, 2, 16 ]
+  } ],
+  "statements" : [ {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "CallExpr",
+      "function" : {
+        "kind" : "Identifier",
+        "name" : "foo",
+        "location" : [ 4, 1, 4, 3 ]
+      },
+      "args" : [ {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 4, 5, 4, 5 ]
+      }, {
+        "kind" : "IntegerLiteral",
+        "value" : 2,
+        "location" : [ 4, 7, 4, 7 ]
+      } ],
+      "location" : [ 4, 1, 4, 8 ]
+    },
+    "location" : [ 4, 1, 4, 8 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 4, 8 ]
+}

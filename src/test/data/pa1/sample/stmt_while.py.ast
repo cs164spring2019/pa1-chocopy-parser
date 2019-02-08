@@ -1,0 +1,20 @@
+{
+  "kind" : "Program",
+  "declarations" : [ ],
+  "statements" : [ {
+    "kind" : "WhileStmt",
+    "condition" : {
+      "kind" : "BooleanLiteral",
+      "value" : true,
+      "location" : [ 1, 7, 1, 10 ]
+    },
+    "body" : [ ],
+    "location" : [ 1, 1, 0, 0 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 0, 0 ]
+}

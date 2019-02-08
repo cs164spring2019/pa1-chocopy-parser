@@ -1,0 +1,85 @@
+{
+  "kind" : "Program",
+  "declarations" : [ ],
+  "statements" : [ {
+    "kind" : "AssignStmt",
+    "targets" : [ {
+      "kind" : "IndexExpr",
+      "list" : {
+        "kind" : "Identifier",
+        "name" : "x",
+        "location" : [ 1, 1, 1, 1 ]
+      },
+      "index" : {
+        "kind" : "IntegerLiteral",
+        "value" : 0,
+        "location" : [ 1, 3, 1, 3 ]
+      },
+      "location" : [ 1, 1, 1, 4 ]
+    }, {
+      "kind" : "Identifier",
+      "name" : "y",
+      "location" : [ 1, 8, 1, 8 ]
+    }, {
+      "kind" : "MemberExpr",
+      "object" : {
+        "kind" : "Identifier",
+        "name" : "z",
+        "location" : [ 1, 12, 1, 12 ]
+      },
+      "member" : {
+        "kind" : "Identifier",
+        "name" : "f",
+        "location" : [ 1, 14, 1, 14 ]
+      },
+      "location" : [ 1, 12, 1, 14 ]
+    } ],
+    "value" : {
+      "kind" : "IntegerLiteral",
+      "value" : 1,
+      "location" : [ 1, 18, 1, 18 ]
+    },
+    "location" : [ 1, 1, 1, 18 ]
+  }, {
+    "kind" : "AssignStmt",
+    "targets" : [ {
+      "kind" : "MemberExpr",
+      "object" : {
+        "kind" : "Identifier",
+        "name" : "z",
+        "location" : [ 2, 1, 2, 1 ]
+      },
+      "member" : {
+        "kind" : "Identifier",
+        "name" : "g",
+        "location" : [ 2, 3, 2, 3 ]
+      },
+      "location" : [ 2, 1, 2, 3 ]
+    }, {
+      "kind" : "Identifier",
+      "name" : "y",
+      "location" : [ 2, 7, 2, 7 ]
+    } ],
+    "value" : {
+      "kind" : "IndexExpr",
+      "list" : {
+        "kind" : "Identifier",
+        "name" : "x",
+        "location" : [ 2, 11, 2, 11 ]
+      },
+      "index" : {
+        "kind" : "IntegerLiteral",
+        "value" : 0,
+        "location" : [ 2, 13, 2, 13 ]
+      },
+      "location" : [ 2, 11, 2, 14 ]
+    },
+    "location" : [ 2, 1, 2, 14 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 2, 14 ]
+}

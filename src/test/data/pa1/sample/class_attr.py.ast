@@ -1,0 +1,65 @@
+{
+  "kind" : "Program",
+  "declarations" : [ {
+    "kind" : "ClassDef",
+    "name" : {
+      "kind" : "Identifier",
+      "name" : "Foo",
+      "location" : [ 1, 7, 1, 9 ]
+    },
+    "superClass" : {
+      "kind" : "Identifier",
+      "name" : "object",
+      "location" : [ 1, 11, 1, 16 ]
+    },
+    "declarations" : [ {
+      "kind" : "VarDef",
+      "var" : {
+        "kind" : "TypedVar",
+        "identifier" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 2, 5, 2, 5 ]
+        },
+        "type" : {
+          "kind" : "ClassType",
+          "className" : "int",
+          "location" : [ 2, 7, 2, 9 ]
+        },
+        "location" : [ 2, 5, 2, 9 ]
+      },
+      "value" : {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 2, 13, 2, 13 ]
+      },
+      "location" : [ 2, 5, 2, 13 ]
+    } ],
+    "location" : [ 1, 1, 2, 13 ]
+  } ],
+  "statements" : [ {
+    "kind" : "AssignStmt",
+    "targets" : [ {
+      "kind" : "Identifier",
+      "name" : "f",
+      "location" : [ 4, 1, 4, 1 ]
+    } ],
+    "value" : {
+      "kind" : "CallExpr",
+      "function" : {
+        "kind" : "Identifier",
+        "name" : "Foo",
+        "location" : [ 4, 5, 4, 7 ]
+      },
+      "args" : [ ],
+      "location" : [ 4, 5, 4, 9 ]
+    },
+    "location" : [ 4, 1, 4, 9 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 4, 9 ]
+}

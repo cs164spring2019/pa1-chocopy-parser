@@ -1,0 +1,28 @@
+{
+  "kind" : "Program",
+  "declarations" : [ ],
+  "statements" : [ {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "CallExpr",
+      "function" : {
+        "kind" : "Identifier",
+        "name" : "print",
+        "location" : [ 1, 1, 1, 5 ]
+      },
+      "args" : [ {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 1, 7, 1, 7 ]
+      } ],
+      "location" : [ 1, 1, 1, 8 ]
+    },
+    "location" : [ 1, 1, 1, 8 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 1, 8 ]
+}

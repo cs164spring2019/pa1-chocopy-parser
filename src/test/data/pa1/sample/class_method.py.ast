@@ -1,0 +1,181 @@
+{
+  "kind" : "Program",
+  "declarations" : [ {
+    "kind" : "ClassDef",
+    "name" : {
+      "kind" : "Identifier",
+      "name" : "Foo",
+      "location" : [ 1, 7, 1, 9 ]
+    },
+    "superClass" : {
+      "kind" : "Identifier",
+      "name" : "object",
+      "location" : [ 1, 11, 1, 16 ]
+    },
+    "declarations" : [ {
+      "kind" : "VarDef",
+      "var" : {
+        "kind" : "TypedVar",
+        "identifier" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 2, 5, 2, 5 ]
+        },
+        "type" : {
+          "kind" : "ClassType",
+          "className" : "int",
+          "location" : [ 2, 7, 2, 9 ]
+        },
+        "location" : [ 2, 5, 2, 9 ]
+      },
+      "value" : {
+        "kind" : "IntegerLiteral",
+        "value" : 0,
+        "location" : [ 2, 13, 2, 13 ]
+      },
+      "location" : [ 2, 5, 2, 13 ]
+    }, {
+      "kind" : "FuncDef",
+      "name" : {
+        "kind" : "Identifier",
+        "name" : "set",
+        "location" : [ 4, 9, 4, 11 ]
+      },
+      "params" : [ {
+        "kind" : "TypedVar",
+        "identifier" : {
+          "kind" : "Identifier",
+          "name" : "self",
+          "location" : [ 4, 13, 4, 16 ]
+        },
+        "type" : {
+          "kind" : "ClassType",
+          "className" : "Foo",
+          "location" : [ 4, 18, 4, 22 ]
+        },
+        "location" : [ 4, 13, 4, 22 ]
+      }, {
+        "kind" : "TypedVar",
+        "identifier" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 4, 25, 4, 25 ]
+        },
+        "type" : {
+          "kind" : "ClassType",
+          "className" : "int",
+          "location" : [ 4, 27, 4, 29 ]
+        },
+        "location" : [ 4, 25, 4, 29 ]
+      } ],
+      "returnType" : {
+        "kind" : "ClassType",
+        "className" : "object",
+        "location" : [ 4, 35, 4, 40 ]
+      },
+      "declarations" : [ ],
+      "statements" : [ {
+        "kind" : "AssignStmt",
+        "targets" : [ {
+          "kind" : "MemberExpr",
+          "object" : {
+            "kind" : "Identifier",
+            "name" : "self",
+            "location" : [ 5, 9, 5, 12 ]
+          },
+          "member" : {
+            "kind" : "Identifier",
+            "name" : "x",
+            "location" : [ 5, 14, 5, 14 ]
+          },
+          "location" : [ 5, 9, 5, 14 ]
+        } ],
+        "value" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 5, 18, 5, 18 ]
+        },
+        "location" : [ 5, 9, 5, 18 ]
+      } ],
+      "location" : [ 4, 5, 5, 18 ]
+    } ],
+    "location" : [ 1, 1, 5, 18 ]
+  } ],
+  "statements" : [ {
+    "kind" : "AssignStmt",
+    "targets" : [ {
+      "kind" : "Identifier",
+      "name" : "f",
+      "location" : [ 7, 1, 7, 1 ]
+    } ],
+    "value" : {
+      "kind" : "CallExpr",
+      "function" : {
+        "kind" : "Identifier",
+        "name" : "Foo",
+        "location" : [ 7, 5, 7, 7 ]
+      },
+      "args" : [ ],
+      "location" : [ 7, 5, 7, 9 ]
+    },
+    "location" : [ 7, 1, 7, 9 ]
+  }, {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "MethodCallExpr",
+      "method" : {
+        "kind" : "MemberExpr",
+        "object" : {
+          "kind" : "Identifier",
+          "name" : "f",
+          "location" : [ 8, 1, 8, 1 ]
+        },
+        "member" : {
+          "kind" : "Identifier",
+          "name" : "set",
+          "location" : [ 8, 3, 8, 5 ]
+        },
+        "location" : [ 8, 1, 8, 5 ]
+      },
+      "args" : [ {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 8, 7, 8, 7 ]
+      } ],
+      "location" : [ 8, 1, 8, 8 ]
+    },
+    "location" : [ 8, 1, 8, 8 ]
+  }, {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "CallExpr",
+      "function" : {
+        "kind" : "Identifier",
+        "name" : "print",
+        "location" : [ 9, 1, 9, 5 ]
+      },
+      "args" : [ {
+        "kind" : "MemberExpr",
+        "object" : {
+          "kind" : "Identifier",
+          "name" : "f",
+          "location" : [ 9, 7, 9, 7 ]
+        },
+        "member" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 9, 9, 9, 9 ]
+        },
+        "location" : [ 9, 7, 9, 9 ]
+      } ],
+      "location" : [ 9, 1, 9, 10 ]
+    },
+    "location" : [ 9, 1, 9, 10 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 9, 10 ]
+}

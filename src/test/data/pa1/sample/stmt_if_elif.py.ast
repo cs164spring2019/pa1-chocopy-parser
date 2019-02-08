@@ -1,0 +1,112 @@
+{
+  "kind" : "Program",
+  "declarations" : [ ],
+  "statements" : [ {
+    "kind" : "IfStmt",
+    "condition" : {
+      "kind" : "BinaryExpr",
+      "left" : {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 1, 4, 1, 4 ]
+      },
+      "operator" : ">",
+      "right" : {
+        "kind" : "IntegerLiteral",
+        "value" : 2,
+        "location" : [ 1, 8, 1, 8 ]
+      },
+      "location" : [ 1, 4, 1, 8 ]
+    },
+    "thenBody" : [ {
+      "kind" : "ExprStmt",
+      "expr" : {
+        "kind" : "CallExpr",
+        "function" : {
+          "kind" : "Identifier",
+          "name" : "print",
+          "location" : [ 2, 5, 2, 9 ]
+        },
+        "args" : [ {
+          "kind" : "IntegerLiteral",
+          "value" : 1,
+          "location" : [ 2, 11, 2, 11 ]
+        } ],
+        "location" : [ 2, 5, 2, 12 ]
+      },
+      "location" : [ 2, 5, 2, 12 ]
+    } ],
+    "elseBody" : [ {
+      "kind" : "IfStmt",
+      "condition" : {
+        "kind" : "BinaryExpr",
+        "left" : {
+          "kind" : "IntegerLiteral",
+          "value" : 3,
+          "location" : [ 3, 6, 3, 6 ]
+        },
+        "operator" : "==",
+        "right" : {
+          "kind" : "IntegerLiteral",
+          "value" : 4,
+          "location" : [ 3, 11, 3, 11 ]
+        },
+        "location" : [ 3, 6, 3, 11 ]
+      },
+      "thenBody" : [ {
+        "kind" : "ExprStmt",
+        "expr" : {
+          "kind" : "CallExpr",
+          "function" : {
+            "kind" : "Identifier",
+            "name" : "print",
+            "location" : [ 4, 5, 4, 9 ]
+          },
+          "args" : [ {
+            "kind" : "IntegerLiteral",
+            "value" : 2,
+            "location" : [ 4, 11, 4, 11 ]
+          } ],
+          "location" : [ 4, 5, 4, 12 ]
+        },
+        "location" : [ 4, 5, 4, 12 ]
+      } ],
+      "elseBody" : [ {
+        "kind" : "IfStmt",
+        "condition" : {
+          "kind" : "BooleanLiteral",
+          "value" : true,
+          "location" : [ 5, 6, 5, 9 ]
+        },
+        "thenBody" : [ {
+          "kind" : "ExprStmt",
+          "expr" : {
+            "kind" : "CallExpr",
+            "function" : {
+              "kind" : "Identifier",
+              "name" : "print",
+              "location" : [ 6, 5, 6, 9 ]
+            },
+            "args" : [ {
+              "kind" : "IntegerLiteral",
+              "value" : 3,
+              "location" : [ 6, 11, 6, 11 ]
+            } ],
+            "location" : [ 6, 5, 6, 12 ]
+          },
+          "location" : [ 6, 5, 6, 12 ]
+        } ],
+        "elseBody" : [ ],
+        "location" : [ 5, 1, 6, 12 ]
+      } ],
+      "location" : [ 3, 1, 6, 12 ]
+    } ],
+    "location" : [ 1, 1, 6, 12 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 6, 12 ]
+}

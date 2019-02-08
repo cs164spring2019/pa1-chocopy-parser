@@ -1,0 +1,105 @@
+{
+  "kind" : "Program",
+  "declarations" : [ {
+    "kind" : "VarDef",
+    "var" : {
+      "kind" : "TypedVar",
+      "identifier" : {
+        "kind" : "Identifier",
+        "name" : "z",
+        "location" : [ 1, 1, 1, 1 ]
+      },
+      "type" : {
+        "kind" : "ClassType",
+        "className" : "int",
+        "location" : [ 1, 3, 1, 5 ]
+      },
+      "location" : [ 1, 1, 1, 5 ]
+    },
+    "value" : {
+      "kind" : "IntegerLiteral",
+      "value" : 0,
+      "location" : [ 1, 9, 1, 9 ]
+    },
+    "location" : [ 1, 1, 1, 9 ]
+  }, {
+    "kind" : "FuncDef",
+    "name" : {
+      "kind" : "Identifier",
+      "name" : "foo",
+      "location" : [ 3, 5, 3, 7 ]
+    },
+    "params" : [ {
+      "kind" : "TypedVar",
+      "identifier" : {
+        "kind" : "Identifier",
+        "name" : "x",
+        "location" : [ 3, 9, 3, 9 ]
+      },
+      "type" : {
+        "kind" : "ClassType",
+        "className" : "int",
+        "location" : [ 3, 11, 3, 13 ]
+      },
+      "location" : [ 3, 9, 3, 13 ]
+    } ],
+    "returnType" : {
+      "kind" : "ClassType",
+      "className" : "bool",
+      "location" : [ 3, 19, 3, 22 ]
+    },
+    "declarations" : [ {
+      "kind" : "GlobalDecl",
+      "variable" : {
+        "kind" : "Identifier",
+        "name" : "z",
+        "location" : [ 4, 12, 4, 12 ]
+      },
+      "location" : [ 4, 5, 4, 12 ]
+    } ],
+    "statements" : [ {
+      "kind" : "ReturnStmt",
+      "value" : {
+        "kind" : "BinaryExpr",
+        "left" : {
+          "kind" : "Identifier",
+          "name" : "x",
+          "location" : [ 5, 12, 5, 12 ]
+        },
+        "operator" : ">",
+        "right" : {
+          "kind" : "Identifier",
+          "name" : "z",
+          "location" : [ 5, 16, 5, 16 ]
+        },
+        "location" : [ 5, 12, 5, 16 ]
+      },
+      "location" : [ 5, 5, 5, 16 ]
+    } ],
+    "location" : [ 3, 1, 5, 16 ]
+  } ],
+  "statements" : [ {
+    "kind" : "ExprStmt",
+    "expr" : {
+      "kind" : "CallExpr",
+      "function" : {
+        "kind" : "Identifier",
+        "name" : "foo",
+        "location" : [ 7, 1, 7, 3 ]
+      },
+      "args" : [ {
+        "kind" : "IntegerLiteral",
+        "value" : 1,
+        "location" : [ 7, 5, 7, 5 ]
+      } ],
+      "location" : [ 7, 1, 7, 6 ]
+    },
+    "location" : [ 7, 1, 7, 6 ]
+  } ],
+  "errors" : {
+    "errors" : [ ],
+    "kind" : "Errors",
+    "location" : [ 0, 0, 0, 0 ]
+  },
+  "location" : [ 1, 1, 7, 6 ]
+}
