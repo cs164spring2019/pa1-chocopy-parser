@@ -1,26 +1,22 @@
 package chocopy.common.codegen;
 
+/** Code-generation related information about a global variable. */
 public class GlobalVarInfo extends VarInfo {
 
+    /** This variable resides in static storage tagged with LABEL. The
+     *  label is prepended with "$" to prevent name clashes. */
     protected final Label label;
 
     /**
-     * Creates a descriptor for a global variable.
-     *
-     * @param varName the name of the variable (just basename; not FQN)
-     * @param initialValue the initial value of the variable or attribute
-     *                     (must be either `null` or a {@link Label} referencing a constant)
+     * A descriptor for a global variable named VARNAME whose initial value
+     * is labeled with INITIALVALUE (null if no initializtion value).
      */
     public GlobalVarInfo(String varName, Label initialValue) {
         super(varName, initialValue);
-        this.label = new Label(String.format("$%s", varName)); // prepend $ sign to prevent collisions
+        this.label = new Label(String.format("$%s", varName));
     }
 
-    /**
-     * Returns the label where the global variable is defined.
-     *
-     * @return the definition label
-     */
+    /** Return the code location of this variable. */
     public Label getLabel() {
         return label;
     }

@@ -2,8 +2,6 @@ package chocopy.pa1;
 
 import java.io.StringReader;
 
-import java_cup.runtime.Symbol;
-
 import chocopy.common.astnodes.Program;
 
 /** Interface between driver and parser. */

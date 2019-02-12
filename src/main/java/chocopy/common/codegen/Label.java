@@ -10,11 +10,7 @@ public class Label {
     /** The name of the label. */
     public final String labelName;
 
-    /**
-     * Creates a new label with a given
-     *
-     * @param labelName the label name
-     */
+    /** A new label with name LABELNAME. */
     public Label(String labelName) {
         this.labelName = labelName;
     }
@@ -24,8 +20,12 @@ public class Label {
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Label label = (Label) o;
         return Objects.equals(labelName, label.labelName);
     }

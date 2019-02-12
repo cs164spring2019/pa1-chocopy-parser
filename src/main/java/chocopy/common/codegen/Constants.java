@@ -22,10 +22,10 @@ public class Constants {
     /** A counter used to generate unique label names for constants. */
     protected int nextLabelSuffix = 0;
 
-    /** The constant representing the boolean `False` */
+    /** The constant representing the boolean `False`. */
     final Label falseConstant = generateConstantLabel();
 
-    /** The constant representing the boolean `True` */
+    /** The constant representing the boolean `True`. */
     final Label trueConstant = generateConstantLabel();
 
     /** A cache for integer-valued constants. */

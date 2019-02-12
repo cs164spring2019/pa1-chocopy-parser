@@ -1,38 +1,31 @@
 package chocopy.common.codegen;
 
+/** Information about a variable or attribute. */
 public abstract class VarInfo extends SymbolInfo {
 
+    /** Name of variable or attribute. */
     protected final String varName;
+    /** Runtime location of initial value for this variable or attribute. */
     protected final Label initialValue;
 
     /**
-     * Creates a descriptor for a variable or attribute.
-     *
-     * @param varName the name of the variable or attribute
-     * @param initialValue the initial value of the variable or attribute
-     *                     (must be either `null` or a {@link Label} referencing a constant)
+     * A descriptor for variable or attribute VARNAME with INITIALVALUE as
+     * the location of its initial value (or null if none).
+     * The initial value may be null (for `None` values)
+     * or a {@link Label} referencing a constant int/str/bool.
      */
     public VarInfo(String varName, Label initialValue) {
         this.varName = varName;
         this.initialValue = initialValue;
     }
 
-    /**
-     * Returns the name of the variable or attribute
-     *
-     * @return the name of the variable or attribute
-     */
+    /** Returns the name of this variable or attribute. */
     public String getVarName() {
         return varName;
     }
 
     /**
-     * Returns initial value of the variable or attribute.
-     *
-     * The initial value may be `null` (for `None` values)
-     * or a {@link Label} referencing a constant int/str/bool.
-     *
-     * @return the initial value of the variable or attribute
+     * Returns label of the initial value of this variable or attribute.
      */
     public Label getInitialValue() {
         return initialValue;

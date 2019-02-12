@@ -46,13 +46,15 @@ public class FuncInfo extends SymbolInfo {
     /** The function body. */
     protected final List<Stmt> statements = new ArrayList<>();
 
-    /** The local symbol table that binds identifiers seen in the function's body. */
+    /** The local symbol table that binds identifiers seen in the
+     *  function's body. */
     protected final SymbolTable<SymbolInfo> symbolTable;
 
     /** The label of the generated code for the function's body. */
     protected final Label codeLabel;
 
-    /** The descriptor of the enclosing function (this is only non-null for nested functions). */
+    /** The descriptor of the enclosing function (this is only non-null
+     *  for nested functions). */
     protected final FuncInfo parentFuncInfo;
 
     /**
@@ -63,58 +65,46 @@ public class FuncInfo extends SymbolInfo {
     protected Consumer<FuncInfo> emitter;
 
     /**
-     * Creates a descriptor for a function or method.
-     *
-     * @param funcName the fully-qualified name of the function
-     * @param depth the nesting depth of the function
-     * @param parentSymbolTable the symbol table of the containing scope
-     * @param parentFuncInfo descriptor of the enclosing function (`null` for global functions and methods)
-     * @param emitter a method that emits the function's body
-     *                (this is usually a generic emitter for user-defined functions/methods,
-     *                and a special emitter for pre-defined functions/methods)
-     */
-    public FuncInfo(String funcName, int depth, SymbolTable<SymbolInfo> parentSymbolTable, FuncInfo parentFuncInfo, Consumer<FuncInfo> emitter) {
+     * Creates a descriptor for a function or method with fully qualified name
+     * FUNCNAME that is at nesting depth DEPTH.  The code label is formed
+     * from FUNCNAME by prepending a $ sign to prevent collisions.
+     * PARENTSYMBOLTABLE is the symbol table of the containing region.
+     * PARENTFUNCINFO is the descriptor of the enclosing function
+     * (null for global functions and methods). EMITTER encapsulates a
+     * method that emits the function's body (this is usually a generic
+     * emitter for user-defined functions/methods, and a special emitter
+     * for pre-defined functions/methods). */
+    public FuncInfo(String funcName, int depth,
+                    SymbolTable<SymbolInfo> parentSymbolTable,
+                    FuncInfo parentFuncInfo, Consumer<FuncInfo> emitter) {
         this.funcName = funcName;
-        this.codeLabel = new Label(String.format("$%s", funcName)); // prepend $ sign to prevent collisions
+        this.codeLabel = new Label(String.format("$%s", funcName));
         this.depth = depth;
         this.symbolTable = new SymbolTable<>(parentSymbolTable);
         this.parentFuncInfo = parentFuncInfo;
         this.emitter = emitter;
     }
 
-    /**
-     * Adds a parameter to this function.
-     *
-     * @param paramInfo the parameter's descriptor
-     */
+    /** Adds parameter with descriptor PARAMINFO to this function. */
     public void addParam(StackVarInfo paramInfo) {
         this.params.add(paramInfo.getVarName());
         this.symbolTable.put(paramInfo.getVarName(), paramInfo);
     }
 
-
-    /**
-     * Adds a local variable to this function.
-     *
-     * @param stackVarInfo the variable's descriptor
-     */
+    /** Adds a local variable with descriptor STACKVARINFO to this function. */
     public void addLocal(StackVarInfo stackVarInfo) {
         this.locals.add(stackVarInfo);
         this.symbolTable.put(stackVarInfo.getVarName(), stackVarInfo);
     }
 
-    /**
-     * Adds the statements in the function.
-     *
-     * @param stmts the statements in the function's body
-     */
+    /** Adds STMTS to the function's body. */
     public void addBody(List<Stmt> stmts) {
         statements.addAll(stmts);
     }
 
     /**
-     * Returns the index of a parameter or local variable
-     * in the function's activation record.
+     * Returns the index of parameter or local variable NAME in the function's
+     * activation record.
      *
      * The convention is that for a function with `N` params
      * and `K` local vars, the `i`th param is at index `i`
@@ -124,99 +114,69 @@ public class FuncInfo extends SymbolInfo {
      *
      * Note: this is an index (starting at 0), and not an offset in
      * number of bytes.
-     *
-     * @param name
-     * @return
      */
     public int getVarIndex(String name) {
-        // First search in params
         int idx = params.indexOf(name);
         if (idx >= 0) {
             return idx;
         }
-        // Otherwise search in locals
         for (int i = 0; i < locals.size(); i++) {
-            if(locals.get(i).getVarName().equals(name)) {
-                // Makes sure to offset from param size
+            if (locals.get(i).getVarName().equals(name)) {
                 return i + params.size();
             }
         }
-        // Should never happen, since semantic analysis is done
-        throw new IllegalArgumentException(String.format("%s is not a var defined in function %s", name, funcName));
+        String msg =
+            String.format("%s is not a var defined in function %s",
+                          name, funcName);
+        throw new IllegalArgumentException(msg);
     }
 
-    /**
-     * Returns the label corresponding to the function's body
-     * in assembly.
-     *
-     * @return the function's code label
-     */
+    /** Returns the label corresponding to the function's body in assembly. */
     public Label getCodeLabel() {
         return codeLabel;
     }
 
     /**
      * Returns the function's defined name in the program.
-     *
      * This is the last component of the dot-separated
      * fully-qualified name.
-     *
-     * @return the function's defined name
      */
     public String getBaseName() {
         int rightmostDotIndex = funcName.lastIndexOf('.');
         if (rightmostDotIndex == -1) {
             return funcName;
         } else {
-            return funcName.substring(rightmostDotIndex+1);
+            return funcName.substring(rightmostDotIndex + 1);
         }
     }
 
-    /**
-     * Returns the function's fully-qualified name.
-     *
-     * @return the function's fully-qualified name
-     */
+    /** Returns the function's fully-qualified name. */
     public String getFuncName() {
         return funcName;
     }
 
-    /**
-     * Returns the function's static depth.
-     *
-     * @return the function's static depth
-     */
+    /** Returns the function's static nesting depth. */
     public int getDepth() {
         return depth;
     }
 
-    /**
-     * Returns the function's parameters in order of definition.
-     *
-     * @return the function's parameters
-     */
+    /** Returns the function's parameters in order of definition. */
     public List<String> getParams() {
         return params;
     }
 
     /**
-     * Returns the function's explicitly defined local variables.
-     * Excludes parameters.
+     * Returns the function's explicitly defined local variables, excluding
+     * parameters.
      *
      * This list is mainly used in generating code for
      * initializing local variables that are not parameters.
-     *
-     * @return the function's explicitly defined local variables
      */
     public List<StackVarInfo> getLocals() {
         return locals;
     }
 
-    /**
-     * Returns the function's body.
-     *
-     * @return list of statements in the function's body
-     */
+    /** Returns the list of statements in the function's body. */
     public List<Stmt> getStatements() {
         return statements;
     }
@@ -230,18 +190,13 @@ public class FuncInfo extends SymbolInfo {
         return symbolTable;
     }
 
-    /**
-     * Returns the parent function's descriptor for nested functions.
-     *
-     * @return the parent function's descriptor (or `null` if this is not a nested function)
-     */
+    /** Returns the parent function's descriptor for nested functions,
+     *  and null if this function is not nested.  */
     public FuncInfo getParentFuncInfo() {
         return parentFuncInfo;
     }
 
-    /**
-     * Emits a function's body.
-     */
+    /** Emits the function's body. */
     public void emitBody() {
         emitter.accept(this);
     }

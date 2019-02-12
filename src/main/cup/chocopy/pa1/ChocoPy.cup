@@ -29,8 +29,12 @@ parser code {:
             } else {
                 return (Program) result.value;
             }
+        } catch (RuntimeException | Error excp) {
+            throw excp;
         } catch (Exception excp) {
-            throw new RuntimeException(excp);
+            String msg =
+                String.format("Internal parser error detected: %s%n", excp);
+            throw new AssertionError(msg);
         }
     }
 
