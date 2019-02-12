@@ -9,8 +9,7 @@ Run the following command to generate and compile your parser, and then run all 
 
     mvn clean package
 
-    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=s \
-         --dir src/test/data/pa1/sample/ --test
+    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=s --dir src/test/data/pa1/sample/ --test
 
 In the starter code, only one test should pass. Your objective is to build a parser that passes all the provided tests and meets the assignment specifications.
 
