@@ -9,19 +9,17 @@ Run the following command to generate and compile your parser, and then run all 
 
     mvn clean package
 
-    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=s --dir src/test/data/pa1/sample/ --test
+    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=s --test --dir src/test/data/pa1/sample/
 
 In the starter code, only one test should pass. Your objective is to build a parser that passes all the provided tests and meets the assignment specifications.
 
 To manually observe the output of your parser when run on a given input ChocoPy program, run the following command (replace the last argument to change the input file):
 
-    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=s \
-         src/test/data/pa1/sample/expr_plus.py
+    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=s src/test/data/pa1/sample/expr_plus.py
 
 You can check the output produced by the staff-provided reference implementation on the same input file, as follows:
 
-    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=r \
-         src/test/data/pa1/sample/expr_plus.py
+    java -cp "chocopy-ref.jar:target/assignment.jar" chocopy.ChocoPy --pass=r src/test/data/pa1/sample/expr_plus.py
 
 Try this with another input file as well, such as `src/test/data/pa1/sample/coverage.py`, to see what happens when the results disagree.
 
