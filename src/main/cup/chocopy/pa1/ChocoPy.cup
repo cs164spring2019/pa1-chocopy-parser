@@ -29,7 +29,7 @@ parser code {:
             } else {
                 return (Program) result.value;
             }
-        } catch (RuntimeException | Error excp) {
+        } catch (RuntimeException excp) {
             throw excp;
         } catch (Exception excp) {
             String msg =
