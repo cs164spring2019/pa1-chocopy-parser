@@ -1,112 +1,112 @@
 {
   "kind" : "Program",
+  "location" : [ 1, 1, 6, 12 ],
   "declarations" : [ ],
   "statements" : [ {
     "kind" : "IfStmt",
+    "location" : [ 1, 1, 6, 12 ],
     "condition" : {
       "kind" : "BinaryExpr",
+      "location" : [ 1, 4, 1, 8 ],
       "left" : {
         "kind" : "IntegerLiteral",
-        "value" : 1,
-        "location" : [ 1, 4, 1, 4 ]
+        "location" : [ 1, 4, 1, 4 ],
+        "value" : 1
       },
       "operator" : ">",
       "right" : {
         "kind" : "IntegerLiteral",
-        "value" : 2,
-        "location" : [ 1, 8, 1, 8 ]
-      },
-      "location" : [ 1, 4, 1, 8 ]
+        "location" : [ 1, 8, 1, 8 ],
+        "value" : 2
+      }
     },
     "thenBody" : [ {
       "kind" : "ExprStmt",
+      "location" : [ 2, 5, 2, 12 ],
       "expr" : {
         "kind" : "CallExpr",
+        "location" : [ 2, 5, 2, 12 ],
         "function" : {
           "kind" : "Identifier",
-          "name" : "print",
-          "location" : [ 2, 5, 2, 9 ]
+          "location" : [ 2, 5, 2, 9 ],
+          "name" : "print"
         },
         "args" : [ {
           "kind" : "IntegerLiteral",
-          "value" : 1,
-          "location" : [ 2, 11, 2, 11 ]
-        } ],
-        "location" : [ 2, 5, 2, 12 ]
-      },
-      "location" : [ 2, 5, 2, 12 ]
+          "location" : [ 2, 11, 2, 11 ],
+          "value" : 1
+        } ]
+      }
     } ],
     "elseBody" : [ {
       "kind" : "IfStmt",
+      "location" : [ 3, 1, 6, 12 ],
       "condition" : {
         "kind" : "BinaryExpr",
+        "location" : [ 3, 6, 3, 11 ],
         "left" : {
           "kind" : "IntegerLiteral",
-          "value" : 3,
-          "location" : [ 3, 6, 3, 6 ]
+          "location" : [ 3, 6, 3, 6 ],
+          "value" : 3
         },
         "operator" : "==",
         "right" : {
           "kind" : "IntegerLiteral",
-          "value" : 4,
-          "location" : [ 3, 11, 3, 11 ]
-        },
-        "location" : [ 3, 6, 3, 11 ]
+          "location" : [ 3, 11, 3, 11 ],
+          "value" : 4
+        }
       },
       "thenBody" : [ {
         "kind" : "ExprStmt",
+        "location" : [ 4, 5, 4, 12 ],
         "expr" : {
           "kind" : "CallExpr",
+          "location" : [ 4, 5, 4, 12 ],
           "function" : {
             "kind" : "Identifier",
-            "name" : "print",
-            "location" : [ 4, 5, 4, 9 ]
+            "location" : [ 4, 5, 4, 9 ],
+            "name" : "print"
           },
           "args" : [ {
             "kind" : "IntegerLiteral",
-            "value" : 2,
-            "location" : [ 4, 11, 4, 11 ]
-          } ],
-          "location" : [ 4, 5, 4, 12 ]
-        },
-        "location" : [ 4, 5, 4, 12 ]
+            "location" : [ 4, 11, 4, 11 ],
+            "value" : 2
+          } ]
+        }
       } ],
       "elseBody" : [ {
         "kind" : "IfStmt",
+        "location" : [ 5, 1, 6, 12 ],
         "condition" : {
           "kind" : "BooleanLiteral",
-          "value" : true,
-          "location" : [ 5, 6, 5, 9 ]
+          "location" : [ 5, 6, 5, 9 ],
+          "value" : true
         },
         "thenBody" : [ {
           "kind" : "ExprStmt",
+          "location" : [ 6, 5, 6, 12 ],
           "expr" : {
             "kind" : "CallExpr",
+            "location" : [ 6, 5, 6, 12 ],
             "function" : {
               "kind" : "Identifier",
-              "name" : "print",
-              "location" : [ 6, 5, 6, 9 ]
+              "location" : [ 6, 5, 6, 9 ],
+              "name" : "print"
             },
             "args" : [ {
               "kind" : "IntegerLiteral",
-              "value" : 3,
-              "location" : [ 6, 11, 6, 11 ]
-            } ],
-            "location" : [ 6, 5, 6, 12 ]
-          },
-          "location" : [ 6, 5, 6, 12 ]
+              "location" : [ 6, 11, 6, 11 ],
+              "value" : 3
+            } ]
+          }
         } ],
-        "elseBody" : [ ],
-        "location" : [ 5, 1, 6, 12 ]
-      } ],
-      "location" : [ 3, 1, 6, 12 ]
-    } ],
-    "location" : [ 1, 1, 6, 12 ]
+        "elseBody" : [ ]
+      } ]
+    } ]
   } ],
   "errors" : {
     "errors" : [ ],
     "kind" : "Errors",
     "location" : [ 0, 0, 0, 0 ]
-  },
-  "location" : [ 1, 1, 6, 12 ]
+  }
 }

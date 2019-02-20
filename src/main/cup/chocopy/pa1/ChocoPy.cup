@@ -105,7 +105,7 @@ action code {:
         return list;
     }
 
-    /** If LIST is non-null, appends ITEM to the end of LIST.  Then returns
+    /** If ITEM is non-null, appends it to the end of LIST.  Then returns
      *  LIST. */
     <T> List<T> combine(List<T> list, T item) {
         if (item != null) {

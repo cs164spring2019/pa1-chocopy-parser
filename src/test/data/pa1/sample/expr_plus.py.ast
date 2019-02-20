@@ -1,39 +1,39 @@
 {
   "kind" : "Program",
+  "location" : [ 1, 1, 1, 9 ],
   "declarations" : [ ],
   "statements" : [ {
     "kind" : "ExprStmt",
+    "location" : [ 1, 1, 1, 9 ],
     "expr" : {
       "kind" : "BinaryExpr",
+      "location" : [ 1, 1, 1, 9 ],
       "left" : {
         "kind" : "BinaryExpr",
+        "location" : [ 1, 1, 1, 5 ],
         "left" : {
           "kind" : "IntegerLiteral",
-          "value" : 1,
-          "location" : [ 1, 1, 1, 1 ]
+          "location" : [ 1, 1, 1, 1 ],
+          "value" : 1
         },
         "operator" : "+",
         "right" : {
           "kind" : "IntegerLiteral",
-          "value" : 2,
-          "location" : [ 1, 5, 1, 5 ]
-        },
-        "location" : [ 1, 1, 1, 5 ]
+          "location" : [ 1, 5, 1, 5 ],
+          "value" : 2
+        }
       },
       "operator" : "+",
       "right" : {
         "kind" : "IntegerLiteral",
-        "value" : 3,
-        "location" : [ 1, 9, 1, 9 ]
-      },
-      "location" : [ 1, 1, 1, 9 ]
-    },
-    "location" : [ 1, 1, 1, 9 ]
+        "location" : [ 1, 9, 1, 9 ],
+        "value" : 3
+      }
+    }
   } ],
   "errors" : {
     "errors" : [ ],
     "kind" : "Errors",
     "location" : [ 0, 0, 0, 0 ]
-  },
-  "location" : [ 1, 1, 1, 9 ]
+  }
 }

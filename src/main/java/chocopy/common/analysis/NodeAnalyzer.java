@@ -58,4 +58,7 @@ public interface NodeAnalyzer<T> {
     T analyze(VarDef node);
     T analyze(WhileStmt node);
 
+    /** Set the default value returned by calls to analyze that are not
+     *  overridden to VALUE. By default, this is null. */
+    void setDefault(T value);
 }

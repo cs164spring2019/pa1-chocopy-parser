@@ -1,43 +1,43 @@
 {
   "kind" : "Program",
+  "location" : [ 1, 1, 1, 17 ],
   "declarations" : [ ],
   "statements" : [ {
     "kind" : "ExprStmt",
+    "location" : [ 1, 1, 1, 17 ],
     "expr" : {
       "kind" : "IfExpr",
+      "location" : [ 1, 1, 1, 17 ],
       "condition" : {
         "kind" : "BinaryExpr",
+        "location" : [ 1, 6, 1, 10 ],
         "left" : {
           "kind" : "IntegerLiteral",
-          "value" : 1,
-          "location" : [ 1, 6, 1, 6 ]
+          "location" : [ 1, 6, 1, 6 ],
+          "value" : 1
         },
         "operator" : ">",
         "right" : {
           "kind" : "IntegerLiteral",
-          "value" : 2,
-          "location" : [ 1, 10, 1, 10 ]
-        },
-        "location" : [ 1, 6, 1, 10 ]
+          "location" : [ 1, 10, 1, 10 ],
+          "value" : 2
+        }
       },
       "thenExpr" : {
         "kind" : "IntegerLiteral",
-        "value" : 3,
-        "location" : [ 1, 1, 1, 1 ]
+        "location" : [ 1, 1, 1, 1 ],
+        "value" : 3
       },
       "elseExpr" : {
         "kind" : "IntegerLiteral",
-        "value" : 4,
-        "location" : [ 1, 17, 1, 17 ]
-      },
-      "location" : [ 1, 1, 1, 17 ]
-    },
-    "location" : [ 1, 1, 1, 17 ]
+        "location" : [ 1, 17, 1, 17 ],
+        "value" : 4
+      }
+    }
   } ],
   "errors" : {
     "errors" : [ ],
     "kind" : "Errors",
     "location" : [ 0, 0, 0, 0 ]
-  },
-  "location" : [ 1, 1, 1, 17 ]
+  }
 }

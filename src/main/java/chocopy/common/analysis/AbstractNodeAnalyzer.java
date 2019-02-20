@@ -12,151 +12,159 @@ import chocopy.common.astnodes.*;
 public class AbstractNodeAnalyzer<T> implements NodeAnalyzer<T> {
     @Override
     public T analyze(AssignStmt node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(BinaryExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(BooleanLiteral node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(CallExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ClassDef node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ClassType node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(CompilerError node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(Errors node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ExprStmt node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ForStmt node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(FuncDef node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(GlobalDecl node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(Identifier node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(IfExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(IfStmt node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(IndexExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(IntegerLiteral node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ListExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ListType node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(MemberExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(MethodCallExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(NoneLiteral node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(NonLocalDecl node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(Program node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(ReturnStmt node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(StringLiteral node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(TypedVar node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(UnaryExpr node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(VarDef node) {
-        return null;
+        return defaultValue;
     }
 
     @Override
     public T analyze(WhileStmt node) {
-        return null;
+        return defaultValue;
     }
+
+    @Override
+    public void setDefault(T value) {
+        defaultValue = value;
+    }
+
+    private T defaultValue = null;
+
 }

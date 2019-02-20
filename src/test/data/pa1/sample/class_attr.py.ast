@@ -1,65 +1,65 @@
 {
   "kind" : "Program",
+  "location" : [ 1, 1, 4, 9 ],
   "declarations" : [ {
     "kind" : "ClassDef",
+    "location" : [ 1, 1, 2, 13 ],
     "name" : {
       "kind" : "Identifier",
-      "name" : "Foo",
-      "location" : [ 1, 7, 1, 9 ]
+      "location" : [ 1, 7, 1, 9 ],
+      "name" : "Foo"
     },
     "superClass" : {
       "kind" : "Identifier",
-      "name" : "object",
-      "location" : [ 1, 11, 1, 16 ]
+      "location" : [ 1, 11, 1, 16 ],
+      "name" : "object"
     },
     "declarations" : [ {
       "kind" : "VarDef",
+      "location" : [ 2, 5, 2, 13 ],
       "var" : {
         "kind" : "TypedVar",
+        "location" : [ 2, 5, 2, 9 ],
         "identifier" : {
           "kind" : "Identifier",
-          "name" : "x",
-          "location" : [ 2, 5, 2, 5 ]
+          "location" : [ 2, 5, 2, 5 ],
+          "name" : "x"
         },
         "type" : {
           "kind" : "ClassType",
-          "className" : "int",
-          "location" : [ 2, 7, 2, 9 ]
-        },
-        "location" : [ 2, 5, 2, 9 ]
+          "location" : [ 2, 7, 2, 9 ],
+          "className" : "int"
+        }
       },
       "value" : {
         "kind" : "IntegerLiteral",
-        "value" : 1,
-        "location" : [ 2, 13, 2, 13 ]
-      },
-      "location" : [ 2, 5, 2, 13 ]
-    } ],
-    "location" : [ 1, 1, 2, 13 ]
+        "location" : [ 2, 13, 2, 13 ],
+        "value" : 1
+      }
+    } ]
   } ],
   "statements" : [ {
     "kind" : "AssignStmt",
+    "location" : [ 4, 1, 4, 9 ],
     "targets" : [ {
       "kind" : "Identifier",
-      "name" : "f",
-      "location" : [ 4, 1, 4, 1 ]
+      "location" : [ 4, 1, 4, 1 ],
+      "name" : "f"
     } ],
     "value" : {
       "kind" : "CallExpr",
+      "location" : [ 4, 5, 4, 9 ],
       "function" : {
         "kind" : "Identifier",
-        "name" : "Foo",
-        "location" : [ 4, 5, 4, 7 ]
+        "location" : [ 4, 5, 4, 7 ],
+        "name" : "Foo"
       },
-      "args" : [ ],
-      "location" : [ 4, 5, 4, 9 ]
-    },
-    "location" : [ 4, 1, 4, 9 ]
+      "args" : [ ]
+    }
   } ],
   "errors" : {
     "errors" : [ ],
     "kind" : "Errors",
     "location" : [ 0, 0, 0, 0 ]
-  },
-  "location" : [ 1, 1, 4, 9 ]
+  }
 }

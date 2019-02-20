@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import java_cup.runtime.ComplexSymbolFactory.Location;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import chocopy.common.analysis.NodeAnalyzer;
 
@@ -21,9 +22,9 @@ public class CompilerError extends Node {
         this.syntax = syntax;
     }
 
-    @JsonIgnore
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     public boolean isSyntax() {
-        return false;
+        return syntax;
     }
 
     @Override

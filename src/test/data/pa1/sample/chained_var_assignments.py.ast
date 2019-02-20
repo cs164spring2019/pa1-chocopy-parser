@@ -1,32 +1,32 @@
 {
   "kind" : "Program",
+  "location" : [ 1, 1, 1, 13 ],
   "declarations" : [ ],
   "statements" : [ {
     "kind" : "AssignStmt",
+    "location" : [ 1, 1, 1, 13 ],
     "targets" : [ {
       "kind" : "Identifier",
-      "name" : "x",
-      "location" : [ 1, 1, 1, 1 ]
+      "location" : [ 1, 1, 1, 1 ],
+      "name" : "x"
     }, {
       "kind" : "Identifier",
-      "name" : "y",
-      "location" : [ 1, 5, 1, 5 ]
+      "location" : [ 1, 5, 1, 5 ],
+      "name" : "y"
     }, {
       "kind" : "Identifier",
-      "name" : "z",
-      "location" : [ 1, 9, 1, 9 ]
+      "location" : [ 1, 9, 1, 9 ],
+      "name" : "z"
     } ],
     "value" : {
       "kind" : "IntegerLiteral",
-      "value" : 1,
-      "location" : [ 1, 13, 1, 13 ]
-    },
-    "location" : [ 1, 1, 1, 13 ]
+      "location" : [ 1, 13, 1, 13 ],
+      "value" : 1
+    }
   } ],
   "errors" : {
     "errors" : [ ],
     "kind" : "Errors",
     "location" : [ 0, 0, 0, 0 ]
-  },
-  "location" : [ 1, 1, 1, 13 ]
+  }
 }
