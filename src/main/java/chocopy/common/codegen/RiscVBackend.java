@@ -90,7 +90,11 @@ public class RiscVBackend {
      * if missing).  Invoke only once per unique label.
      */
     public void emitLocalLabel(Label label, String comment) {
-        emitInsn(label + ":", comment);
+        if (comment != null) {
+            emit(String.format("%-42s # %s", label + ":", comment));
+        } else {
+            emit(String.format("%s:", label + ":", comment));
+        }
     }
 
     /**

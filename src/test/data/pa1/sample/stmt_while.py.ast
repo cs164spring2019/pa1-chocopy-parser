@@ -1,10 +1,10 @@
 {
   "kind" : "Program",
-  "location" : [ 1, 1, 0, 0 ],
+  "location" : [ 1, 1, 1, 11 ],
   "declarations" : [ ],
   "statements" : [ {
     "kind" : "WhileStmt",
-    "location" : [ 1, 1, 0, 0 ],
+    "location" : [ 1, 1, 1, 11 ],
     "condition" : {
       "kind" : "BooleanLiteral",
       "location" : [ 1, 7, 1, 10 ],
